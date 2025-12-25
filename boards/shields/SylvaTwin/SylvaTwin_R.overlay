@@ -95,11 +95,3 @@
 };
 
 &vbatt { status = "disabled";};
-
-&trackball {
-    rest-enable = <0>;
-
-    run-downshift-time = <0>;
-    rest1-downshift-time = <0>;
-    rest2-downshift-time = <0>;
-};
