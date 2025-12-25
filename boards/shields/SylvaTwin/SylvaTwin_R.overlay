@@ -96,7 +96,7 @@
 
 &vbatt { status = "disabled";};
 
-&pmw3610 {
+&trackball {
     rest-enable = <0>;
 
     run-downshift-time = <0>;
