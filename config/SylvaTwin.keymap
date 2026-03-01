@@ -77,8 +77,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp INTERNATIONAL_1  &kp EQUAL         &kp INTERNATIONAL_3
 &trans  &trans  &trans  &trans  &trans  &trans                                  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SINGLE_QUOTE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SEMICOLON        &none             &kp BSLH
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans  &studio_unlock  &kp NUMBER_0  &kp COMMA     &kp DOT       &none                &none             &none
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SEMICOLON        &kp UP            &kp BSLH
+&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans  &studio_unlock  &kp NUMBER_0  &kp COMMA     &kp DOT       &kp LEFT_ARROW       &kp DOWN          &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
