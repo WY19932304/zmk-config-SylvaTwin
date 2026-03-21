@@ -57,6 +57,11 @@
             bindings = <&kp LC(X)>;
             key-positions = <40 26>;
         };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <10 9>;
+        };
     };
 
     keymap {
@@ -92,7 +97,7 @@
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &studio_unlock  &trans  &trans     &trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
     };
 };
