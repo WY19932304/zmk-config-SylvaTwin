@@ -74,6 +74,49 @@
         };
     };
 
+    macros {
+        Bt0: Bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1 &tog_off 2>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>;
+
+            label = "BT0";
+        };
+
+        Bt1: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1 &tog_off 2>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 1>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
+
+            label = "NEW_MACRO";
+        };
+
+        Bt2: ne {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1 &tog_off 2>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 2>,
+                <&macro_wait_time 500>,
+                <&tog_on 2>;
+
+            label = "NE";
+        };
+    };
+
+    behaviors {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -125,7 +168,7 @@
             bindings = <
 &none         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                              &mkp LCLK  &mkp RCLK  &trans  &trans          &trans          &trans
 &none         &kp F6        &kp F7        &kp F8        &kp F9        &kp F10                             &mkp MCLK  &trans     &trans  &trans          &trans          &trans
-&none         &kp F11       &kp F12       &none         &none         &none       &none           &trans  &trans     &trans     &trans  &trans          &mmv MOVE_UP    &trans
+&none         &kp F11       &kp F12       &Bt0          &Bt1          &Bt2        &none           &trans  &trans     &trans     &trans  &trans          &mmv MOVE_UP    &trans
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &studio_unlock  &trans  &trans     &trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
             >;
 
@@ -134,35 +177,35 @@
     };
 };
 
-   behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+behaviors {
+    lt_to_layer_0: lt_to_layer_0 {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LAYER_TAP_TO_0";
+        bindings = <&mo>, <&to_layer_0>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
-        };
-
-        tog_on: toggle_layer_on_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer On";
-            toggle-mode = "on";
-        };
-
-        tog_off: toggle_layer_off_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
-        };
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
     };
+
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+        tap-ms = <20>;
+    };
+
+    tog_on: toggle_layer_on_only {
+        compatible = "zmk,behavior-toggle-layer";
+        #binding-cells = <1>;
+        display-name = "Toggle Layer On";
+        toggle-mode = "on";
+    };
+
+    tog_off: toggle_layer_off_only {
+        compatible = "zmk,behavior-toggle-layer";
+        #binding-cells = <1>;
+        display-name = "Toggle Layer Off";
+        toggle-mode = "off";
+    };
+};
