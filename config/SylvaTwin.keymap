@@ -68,7 +68,7 @@
         };
 
         ZEN_HAN_MAC {
-            bindings = <&caps_word>;
+            bindings = <&kp CAPS>;
             key-positions = <0 1>;
             layers = <2>;
         };
