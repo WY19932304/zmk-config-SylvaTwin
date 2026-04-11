@@ -91,6 +91,11 @@
             key-positions = <41 27>;
             layers = <2>;
         };
+
+        Caps {
+            bindings = <&caps_word>;
+            key-positions = <12 13>;
+        };
     };
 
     macros {
