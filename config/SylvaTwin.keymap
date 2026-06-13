@@ -213,7 +213,7 @@
 &Bt0    &Bt1      &Bt2            &trans     &kp BACKSPACE  &kp LEFT_SHIFT  &trans  &studio_unlock  &kp NUMBER_0  &num_00       &kp DOT       &kp LEFT_ARROW       &kp DOWN          &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         layer_4 {
