@@ -32,5 +32,8 @@ manifest:
     - name: zmk-feature-non-lipo-battery-management
       remote: sekigon-gonnoc
       revision: main
+    - name: zmk-dynamic-keymapper
+      url: https://github.com/alektor-diy/zmk-dynamic-keymapper
+      revision: main
   self:
     path: config
