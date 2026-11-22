@@ -17,6 +17,9 @@ manifest:
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
+    - name: zmk-dynamic-keymapper
+      url: https://github.com/alektor-diy/zmk-dynamic-keymapper
+      revision: main
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
@@ -31,9 +34,6 @@ manifest:
       revision: main
     - name: zmk-feature-non-lipo-battery-management
       remote: sekigon-gonnoc
-      revision: main
-    - name: zmk-dynamic-keymapper
-      url: https://github.com/alektor-diy/zmk-dynamic-keymapper
       revision: main
   self:
     path: config
