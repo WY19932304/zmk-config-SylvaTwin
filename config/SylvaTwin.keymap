@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
 #include <zdkm.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
